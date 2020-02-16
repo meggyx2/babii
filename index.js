@@ -17,7 +17,7 @@ bot.on('messageUpdate', (message) => lastEdited = message);
 bot.on('messageDelete', (message) => lastDeleted = message);
 
 bot.on('ready', function () {
-    bot.user.setPresence({ game: { name: 'boost babi pwease' }, status: 'online' });
+    bot.user.setPresence({ game: { name: 'boost babi pwease' }, status: 'online' }).then(u => console.log("Set game to: " + u.localPresence.game.name));
 
     const str = `
     ##########################################################################
