@@ -5,4 +5,3 @@ module.exports.run = (bot, guild, message, args) => {
         message.member.setNickname(message.member.displayName.replace('[AFK] ', ''));
     }
 }
-
