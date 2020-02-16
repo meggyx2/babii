@@ -1,7 +1,8 @@
 module.exports.run = (bot, guild, message, args) => {
-    if(!message.member.nickname.startsWith('[AFK]')) {
-        message.member.setNickname('[AFK] ' + message.member.nickname);
+    if(!message.member.displayName.startsWith('[AFK]')) {
+        message.member.setNickname('[AFK] ' + message.member.displayName);
     } else {
-        message.member.setNickname(message.member.nickname.replace('[AFK] ', ''));
+        message.member.setNickname(message.member.displayName.replace('[AFK] ', ''));
     }
 }
+
